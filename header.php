@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <?php if ( is_home() ) { ?>
-<title><?php echo stripslashes(get_option('tang_title')); ?></title>
+<title><?php bloginfo('name'); ?></title>
 <?php } ?>
 <?php if ( is_search() ) { ?>
 <title>搜索结果 - <?php bloginfo('name'); ?></title>
@@ -76,7 +76,7 @@ wp_head();
 <body>
 <header id="header">
   <div class="avatar"><a href="/"><img src="<?php bloginfo('template_directory'); ?>/images/avatar.jpg" alt="<?php bloginfo('name'); ?>" class="img-circle" width="50%"></a></div>
-  <h3 id="name"><?php bloginfo('name'); ?></h3>
+  <a href="/"><h3 id="name"><?php bloginfo('name'); ?></h3></a>
   <div class="sns">
     <a href="<?php bloginfo('rss2_url'); ?>" target="_blank" rel="nofollow" title="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a>
     <?php if (get_option('tang_weibo') == '显示') { ?>
